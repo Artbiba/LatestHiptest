@@ -1,7 +1,18 @@
 package asd;
 
-public class Actionwords {
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
+public class Actionwords {
+    private WebDriver driver;
+
+    public Actionwords() {
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+    }
     public void iOpenHttpGoogleCom(String httpGoogleCom) {
 
     }
@@ -19,7 +30,7 @@ public class Actionwords {
     }
 
     public void clickLoginButton() {
-
+        driver.findElement(By.xpath("//a"));
     }
 
     public void iInputValidEmail(String freeText) {
